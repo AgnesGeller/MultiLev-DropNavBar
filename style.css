@@ -13,6 +13,7 @@ body{
 #top-search{
     background-color: #9ffd94;
     padding: 0px 5%;
+    height: 0;
 }
 .input-box{
     position: relative;
@@ -313,4 +314,28 @@ body{
     .navbar ul li ul li>ul{
         background-color: #195313;
     }
-}
+
+    #menu{
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+    #menu.show{
+        overflow-y: scroll;
+        visibility: visible;
+        opacity: 1;
+        max-height: 100vh;      
+    }
+    .submenu .sub-sub-menu{
+        display: none;
+    }
+
+.submenushow .sub-sub-menu{
+    display: block;
+    }
+    }
